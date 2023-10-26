@@ -29,8 +29,165 @@
         is not difficult, why not just provide the option to choose from a list of 16 units? Some standard,
         some 'obscure'!
     </p>
+
+    <h2>Definition</h2>
+
+    <math display="block" class="tml-display" style="display:block math;">
+        <mrow>
+          <mtext>aTan2(x,y)</mtext>
+          <mo>=</mo>
+          <mrow>
+            <mo fence="true" form="prefix">{</mo>
+            <mtable>
+              <mtr>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 0em;">
+                  <mrow>
+                    <mrow>
+                      <mi>arctan</mi>
+                      <mo>⁡</mo>
+                    </mrow>
+                    <mo form="prefix" stretchy="false">(</mo>
+                    <mfrac>
+                      <mi>y</mi>
+                      <mi>x</mi>
+                    </mfrac>
+                    <mo form="postfix" stretchy="false">)</mo>
+                  </mrow>
+                </mtd>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 1em;">
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                    <mtext> and </mtext>
+                    <mi>y</mi>
+                    <mo>≥</mo>
+                    <mn>0</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 0em;">
+                  <mrow>
+                    <mrow>
+                      <mspace width="0.1667em"></mspace>
+                      <mi>arctan</mi>
+                      <mo>⁡</mo>
+                    </mrow>
+                    <mo form="prefix" stretchy="false">(</mo>
+                    <mfrac>
+                      <mi>y</mi>
+                      <mi>x</mi>
+                    </mfrac>
+                    <mo form="postfix" stretchy="false">)</mo>
+                    <mo>+</mo>
+                    <mn>2</mn>
+                    <mi>π</mi>
+                  </mrow>
+                </mtd>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 1em;">
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                    <mtext> and </mtext>
+                    <mi>y</mi>
+                    <mo>&lt;</mo>
+                    <mn>0</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 0em;">
+                  <mrow>
+                    <mrow>
+                      <mspace width="0.1667em"></mspace>
+                      <mi>arctan</mi>
+                      <mo>⁡</mo>
+                    </mrow>
+                    <mo form="prefix" stretchy="false">(</mo>
+                    <mfrac>
+                      <mi>y</mi>
+                      <mi>x</mi>
+                    </mfrac>
+                    <mo form="postfix" stretchy="false">)</mo>
+                    <mo>+</mo>
+                    <mi>π</mi>
+                  </mrow>
+                </mtd>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 1em;">
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>&lt;</mo>
+                    <mn>0</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 0em;">
+                  <mfrac>
+                    <mi>π</mi>
+                    <mn>2</mn>
+                  </mfrac>
+                </mtd>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 1em;">
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                    <mtext> and </mtext>
+                    <mi>y</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 0em;">
+                  <mrow>
+                    <mo>−</mo>
+                    <mfrac>
+                      <mi>π</mi>
+                      <mn>2</mn>
+                    </mfrac>
+                  </mrow>
+                </mtd>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 1em;">
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                    <mtext> and </mtext>
+                    <mi>y</mi>
+                    <mo>&gt;</mo>
+                    <mn>0</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 0em;">
+                  <mtext>undefined</mtext>
+                </mtd>
+                <mtd class="tml-left" style="padding:0.5ex 0em 0.5ex 1em;">
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                    <mtext> and </mtext>
+                    <mi>y</mi>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" form="postfix"></mo>
+          </mrow>
+        </mrow>
+      </math>
+
     <div>
-        <p><strong>Instructions</strong></p>
+        <h3><strong>Instructions</strong></h3>
         <ol>
             <li>Enter x-coordinate value</li>
             <li>Enter y-coordinate value</li>
@@ -41,11 +198,6 @@
     </div>
 
     <hr>
-
-    <!-- QUESTIONS
-            - Page 224 says HTML does not provide support for tooltips - is what I'm seeing not a tooltip? (Hover on numerical input)
-            - HOW TO KEEP REQUIREMENTS WITHOUT "SUBMIT" maybe see: https://stackoverflow.com/questions/60058280/required-attribute-not-working-with-form-tag
-    -->
 
     <div class="form-bckgrd">
         <form id="coords" action="">
@@ -99,16 +251,13 @@
 
             <br>
 
-            <!-- new addition: change button type so as not to have 
-                 to deal with the infuriating preventDefault() since the book just glosses over it
-             -->
-            <!-- <input id="calc" type="button" value="Calculate!" class="form-button"> -->
             <input id="calc" type="submit" value="Calculate!" class="form-button">
             <!-- new addition: reset input button -->
             <input type="reset" value="Clear Input" class="form-button">
 
              <br>
-
+            
+            <!-- new addition: change how the result is written to the document; option to append or overwrite -->
              <fieldset>
                 <legend>Retain Previous Outputs?</legend>
 

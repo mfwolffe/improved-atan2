@@ -40,9 +40,17 @@ p {
     position: relative;
     border-radius: 18px;
     text-align: center;
-    width: 400px;
-    height: 160px;
+    width: 20rem;
+    height: 13rem;
     background-color: #7FDBFF;
+}
+
+fieldset > legend {
+    padding-top: 1rem;
+}
+
+fieldset {
+    border: none;
 }
 
 .form-cntnt {

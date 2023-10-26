@@ -138,7 +138,6 @@ document.getElementById("coords").addEventListener("submit", function(e) {
     writeOutput();
 
     function calculate(x, y) {
-
         let result = (x != 0) ? Math.atan(y / x) : 0;
 
         if (x > 0)
@@ -157,10 +156,7 @@ document.getElementById("coords").addEventListener("submit", function(e) {
     }
 
     function findUnit(str) {
-
         for (let un of units) {
-
-
             if (str == un["name"]) {
                 console.log("found");
                 return un;
@@ -169,7 +165,6 @@ document.getElementById("coords").addEventListener("submit", function(e) {
     }
 
     function parseConversionFactor(str) {
-
         let re = /^\d+$/;
 
         if (re.test(str))
@@ -203,7 +198,6 @@ document.getElementById("coords").addEventListener("submit", function(e) {
         return performOperation(operandL, operandR, operator);
 
         function handleConstants(str) {
-
             if (re.test(str)) {
                 console.log("true");
                 return Number(str);
@@ -219,36 +213,25 @@ document.getElementById("coords").addEventListener("submit", function(e) {
         function performOperation(operand1, operand2, operator) {
 
             switch (operator) {
-
                 case "+":
                     return operand1 + operand2;
-
                 case "-":
                     return operand1 - operand2;
-
                 case "*":
                     return operand1 * operand2;
-
                 case "/":
                     return operand1 / operand2;
             }
         }
     }
 
-    function generateMessage() {
-        return `The standard angle produced with terminal ray passing through the point ` +
-               `(${x_coord}, ${y_coord}) is ${result}${(unit == "degrees") ? symbol : " " + symbol}`;
-    }
+    // old
+    // function generateMessage() {
+    //     return `The standard angle produced with terminal ray passing through the point ` +
+    //            `(${x_coord}, ${y_coord}) is ${result}${(unit == "degrees") ? symbol : " " + symbol}`;
+    // }
 
     function writeOutput() {
-
-        // let outputTarget = document.getElementById("results");
-
-        // if (document.getElementById("overwrite").checked) {
-        //     outputTarget.remove();
-        //     outputTarget = document.createElement("div");
-        //     outputTarget.setAttribute("id", "results");
-        // }
 
         let outputTarget = document.getElementById("results");
 
@@ -268,135 +251,3 @@ document.getElementById("coords").addEventListener("submit", function(e) {
         }
     }
 });
-
-
-
-// new addition: rethink form "submission"
-// document.getElementById("calc").addEventListener('click', function () {
-
-//     let x_coord = document.getElementById("x").value;
-//     let y_coord = document.getElementById("y").value;
-//     let unit = document.getElementById("unit").value;
-
-//     unit = findUnit(unit);
-    
-//     let symbol = unit["symbol"];
-//     let conversionFactor = unit["conversion"];
-
-//     conversionFactor = parseConversionFactor(conversionFactor);
-
-//     let result = calculate(x_coord, y_coord);
-
-//     unit = unit["name"];
-
-//     result = (unit === "radians") ? result : result * conversionFactor;
-
-//     alert(generateMessage());
-
-//     function calculate(x, y) {
-
-//         let result = (x != 0) ? Math.atan(y / x) : 0;
-
-//         if (x > 0)
-//             return result >= 0 ? result : result + tau;
-
-//         if (x < 0)
-//             return result + Math.PI;
-
-//         if (y > 0)
-//             return Math.PI / 2;
-
-//         if (y < 0)
-//             return 3 * Math.PI / 2;
-
-//         return undefined;
-//     }
-
-//     function findUnit(str) {
-
-//         for (let un of units) {
-
-
-//             if (str == un["name"]) {
-//                 console.log("found");
-//                 return un;
-//             }
-//         }
-//     }
-
-//     function parseConversionFactor(str) {
-
-//         let re = /^\d+$/;
-
-//         if (re.test(str))
-//             return Number(str);
-
-//         let stripped = str.replace(/\s+/g, "");
-
-//         console.log(`STRIPPED: ${stripped}\n`)
-
-//         re = /[+\-*\/]/;
-
-//         let operatorLocation = stripped.search(re);
-//         let operator = stripped[operatorLocation];
-
-//         console.log(`OPERATOR: ${operator}`);
-
-//         let subStr1 = stripped.substring(0, operatorLocation);
-//         let subStr2 = stripped.substring(operatorLocation + 1, stripped.length);
-
-//         console.log(`sub1: ${subStr1}`);
-//         console.log(`sub2: ${subStr2}`);
-
-//         re = /^\d+$/;
-
-//         let operandL = handleConstants(subStr1);
-//         let operandR = handleConstants(subStr2);
-
-//         console.log(`OPERAND 1: ${operandL}`);
-//         console.log(`OPERAND 2: ${operandR}`);
-
-//         return performOperation(operandL, operandR, operator);
-
-//         function handleConstants(str) {
-
-//             if (re.test(str)) {
-//                 console.log("true");
-//                 return Number(str);
-//             }
-
-//             if (str === "pi")
-//                 return Math.PI;
-
-//             if (str === "tau")
-//                 return Math.PI * 2;
-//         }
-
-//         function performOperation(operand1, operand2, operator) {
-
-//             switch (operator) {
-
-//                 case "+":
-//                     return operand1 + operand2;
-
-//                 case "-":
-//                     return operand1 - operand2;
-
-//                 case "*":
-//                     return operand1 * operand2;
-
-//                 case "/":
-//                     return operand1 / operand2;
-//             }
-//         }
-//     }
-
-//     function generateMessage() {
-//         return `The standard angle produced with terminal ray passing through the point ` +
-//                `(${x_coord}, ${y_coord}) is ${result}${(unit == "degrees") ? symbol : " " + symbol}`;
-//     }
-// });
-
-// var form = document.getElementById("coords");
-
-// form.addEventListener("submit", submission, true);
