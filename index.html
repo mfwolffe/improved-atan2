@@ -55,10 +55,10 @@
 
             <label for="x">x-coordinate:</label>
             <!-- new addition: placeholder & regex (require numerical text)-->
-            <input class="numerical" type="text" id="x" name="x" placeholder="Enter a number" pattern="^\d*\.?\d*" required><br>
+            <input class="numerical" type="text" id="x" name="x" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
             <label for="y">y-coordinate:</label>
             <!-- new addition: placeholder & regex regex (require numerical text)-->
-            <input class="numerical" type="text" id="y" name="y" placeholder="Enter a number" pattern="^\d*\.?\d*" required><br>
+            <input class="numerical" type="text" id="y" name="y" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
             <label for="unit" class="form-drop">Select unit</label>
             <select name="unit" id="unit" class="form-drop" required>
                 <!-- new addition: default for validation -->
@@ -102,9 +102,24 @@
             <!-- new addition: change button type so as not to have 
                  to deal with the infuriating preventDefault() since the book just glosses over it
              -->
-            <input id="calc" type="button" value="Calculate!" class="form-button">
+            <!-- <input id="calc" type="button" value="Calculate!" class="form-button"> -->
+            <input id="calc" type="submit" value="Calculate!" class="form-button">
             <!-- new addition: reset input button -->
             <input type="reset" value="Clear Input" class="form-button">
+
+             <br>
+
+             <fieldset>
+                <legend>Retain Previous Outputs?</legend>
+
+                <input type="radio" id="retain" name="outputChoice" checked>
+                <label for="retain">Retain</label>
+
+                <input type="radio" id="overwrite" name="outputChoice" checked>
+                <label for="overwrite">Overwrite</label>
+
+             </fieldset>
+
         </div>
         </form>
     </div>
@@ -130,6 +145,10 @@
             }
         });
     </script>
+
+    <div id="results">
+
+    </div>
 
 </body>
 </html>
