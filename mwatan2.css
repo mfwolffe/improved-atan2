@@ -1,0 +1,60 @@
+h1 {
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    height: 60px;
+    line-height: 60px;
+    text-indent: 6px;
+    background-color: sienna;
+    color: azure;
+}
+
+/* new addition: basic validation */
+/* input.numerical:valid {
+    background-color: #8cdb80;
+}
+
+input.numerical:invalid {
+    background-color: #bd5b5b;
+} */
+
+body {
+    font-family: sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+p {
+    margin-left: 6px;
+}
+
+.credit {
+    margin-top: 0px;
+}
+
+
+.form-bckgrd {
+    margin: auto;
+    position: relative;
+    border-radius: 18px;
+    text-align: center;
+    width: 400px;
+    height: 160px;
+    background-color: #7FDBFF;
+}
+
+.form-cntnt {
+    padding-top: 26px;
+}
+
+.form-drop {
+    line-height: 35px;
+}
+
+.form-button {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

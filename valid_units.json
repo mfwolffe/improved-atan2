@@ -1,0 +1,106 @@
+[
+
+    {
+        "name": "radians",
+      "symbol": "rad",
+        "conversion": "1"
+    },
+  
+    {
+        "name": "degrees",
+      "symbol": "\u00b0",
+        "conversion": "180 / pi"
+    },
+    
+    {
+        "name": "binary radians",
+      "symbol": "brad",
+        "conversion": "256 / tau"
+    },
+    
+    {
+        "name": "gradians",
+      "symbol": "grad",
+        "conversion": "200 / pi"
+    },
+    
+    {
+        "name": "signs",
+      "symbol": "30\u00b0",
+        "conversion": "6 / pi"
+    },
+    
+    {
+        "name": "turns",
+      "symbol": "turns",
+        "conversion": "1 / tau"
+    },  
+    
+    {
+        "name": "octants",
+      "symbol": "oct",
+        "conversion": "4 / pi"
+    },
+    
+    {
+        "name": "sextants",
+      "symbol": "60\u00b0'",
+        "conversion": "3 / pi"
+    },
+    
+    {
+        "name": "quadrants",
+      "symbol": "quad'",
+        "conversion": "2 / pi"
+    },
+    
+    {
+        "name": "centirads",
+      "symbol": "crad",
+        "conversion": "100"
+    },
+    
+    {
+        "name": "millirads",
+      "symbol": "mrad",
+        "conversion": "1000"
+    },
+    
+    {
+        "name": "arcminutes",
+      "symbol": "'",
+        "conversion": "10800 / pi"
+    },
+    
+    {
+        "name": "arcseconds",
+      "symbol": "\"",
+        "conversion": "648000 / pi"
+    },
+    
+    {
+        "name": "hour angles",
+      "symbol": "HA",
+        "conversion": "24 / tau"
+    },
+    
+    {
+        "name": "diameter parts",
+      "symbol": "\u2205",
+        "conversion": "60"
+    },
+    
+    {
+        "name": "centesimal minutes",
+      "symbol": "c MOA",
+        "conversion": "20000 / pi"
+    },
+    
+    {
+        "name": "centesimal seconds",
+      "symbol": "c SOA",
+        "conversion": "2000000 / pi"
+    }
+    
+  ]
+  

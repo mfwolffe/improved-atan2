@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Matt Wolffe">
+    <meta name="description" content="Better ATan2">
+    <script type="module" src="MWATan2.js"></script>
+    <link rel="stylesheet" type="text/css" href="mwatan2.css">
+    <title>Better ATan2</title>
+</head>
+
+<body>
+    <!-- TODO: 
+                - Add LaTeX (or alternative, but I use LaTeX all the time) to the html to show
+                   a formal piecewise definition of this version of aTan2()
+                - bootstrap for responsive design
+    -->
+
+    <h1>A Better ATan2</h1>
+    <p class="credit"><small>by Matt Wolffe</small></p>
+
+    <p>
+        ATan2 is simply an arctangent function modified to return an angle in any quadrant. 
+        Most ATan2 calculators return angles from (-&#960;, &#960;], which, in my opinion,
+        is not as useful as returning an angle between [0, 2&#960).
+    </p>
+    <p>
+        Most calculators are also restricted to radians, and while the conversion to another unit
+        is not difficult, why not just provide the option to choose from a list of 16 units? Some standard,
+        some 'obscure'!
+    </p>
+    <div>
+        <p><strong>Instructions</strong></p>
+        <ol>
+            <li>Enter x-coordinate value</li>
+            <li>Enter y-coordinate value</li>
+            <li>Select a unit from the drop-down</li>
+            <li>Click "Calculate!"</li>
+            <li>Revel in the fact you saved however long it would have taken to find the angle manually!</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <!-- QUESTIONS
+            - Page 224 says HTML does not provide support for tooltips - is what I'm seeing not a tooltip? (Hover on numerical input)
+            - HOW TO KEEP REQUIREMENTS WITHOUT "SUBMIT" maybe see: https://stackoverflow.com/questions/60058280/required-attribute-not-working-with-form-tag
+    -->
+
+    <div class="form-bckgrd">
+        <form id="coords" action="">
+            <div class="form-cntnt">
+
+            <!-- fieldset & legend?? -->
+
+            <label for="x">x-coordinate:</label>
+            <!-- new addition: placeholder & regex (require numerical text)-->
+            <input class="numerical" type="text" id="x" name="x" placeholder="Enter a number" pattern="^\d*\.?\d*" required><br>
+            <label for="y">y-coordinate:</label>
+            <!-- new addition: placeholder & regex regex (require numerical text)-->
+            <input class="numerical" type="text" id="y" name="y" placeholder="Enter a number" pattern="^\d*\.?\d*" required><br>
+            <label for="unit" class="form-drop">Select unit</label>
+            <select name="unit" id="unit" class="form-drop" required>
+                <!-- new addition: default for validation -->
+                <option value="">Select an angle measure</option>
+
+                <!-- new addition: optgroups -->
+                <optgroup label="Common">
+                    <option value="degrees">Degrees</option>
+                    <option value="radians">Radians</option>
+                    <option value="gradians">Gradians</option>
+                </optgroup>
+
+                <optgroup label="Less Common">
+                    <option value="binary radians">Binary Radians</option>
+                    <option value="centirads">Centirads</option>
+                    <option value="millirads">Millirads</option>
+                </optgroup>
+
+                <optgroup label="Multiples of Common Angles">
+                    <option value="signs">Signs</option>
+                    <option value="turns">Turns</option>
+                    <option value="octants">Octants</option>
+                    <option value="sextants">Sextants</option>
+                </optgroup>
+
+                <optgroup label="Geographic/Astronomical">
+                    <option value="centesimal minutes">Centesimal Minutes</option>
+                    <option value="centesimal seconds">Centesimal Seconds</option>
+                    <option value="arcminutes">Arc minutes</option>
+                    <option value="arcseconds">Arc seconds</option>
+                    <option value="hour angles">Hour Angles</option>
+                </optgroup>
+
+                <optgroup label='Uncommon/"Archaic"'>
+                    <option value="diameter parts">Diameter Parts</option>
+                </optgroup>
+            </select>
+
+            <br>
+
+            <!-- new addition: change button type so as not to have 
+                 to deal with the infuriating preventDefault() since the book just glosses over it
+             -->
+            <input id="calc" type="button" value="Calculate!" class="form-button">
+            <!-- new addition: reset input button -->
+            <input type="reset" value="Clear Input" class="form-button">
+        </div>
+        </form>
+    </div>
+
+    <!-- new addition: focus changes color -->
+    <script>
+        function bckgrd(e) {
+            if (e.type == "focus") {
+                e.target.style.backgroundColor = "#FFE393";
+            }
+            else if (e.type == "blur") {
+                e.target.style.backgroundColor = "#FFFFFF";
+            }
+        }
+
+        window.addEventListener("load", function() {
+            const cssSelector = "input[type=text]";
+            const fields = document.querySelectorAll(cssSelector);
+
+            for (let f of fields) {
+                f.addEventListener("focus", bckgrd);
+                f.addEventListener("blur", bckgrd);
+            }
+        });
+    </script>
+
+</body>
+</html>
