@@ -21,8 +21,26 @@
 
     <p>
         ATan2 is simply an arctangent function modified to return an angle in any quadrant. 
-        Most ATan2 calculators return angles from (-&#960;, &#960;], which, in my opinion,
-        is not as useful as returning an angle between [0, 2&#960).
+        Most ATan2 calculators return angles from 
+        <math display="inline" class="tml-display" style="display:block math;">
+            <mrow>
+              <mo form="prefix" stretchy="false">(</mo>
+              <mo>−</mo>
+              <mi>π</mi>
+              <mo separator="true">,</mo>
+              <mi>π</mi>
+              <mo form="postfix" stretchy="false">]</mo>
+            </mrow>
+          </math>, which, in my opinion,
+        is not as useful as returning an angle between 
+        <math display="inline" class="tml-display" style="display:block math;">
+            <mrow>
+              <mo form="prefix" stretchy="false">[</mo>
+              <mn>0,2</mn>
+              <mi>π</mi>
+              <mo form="postfix" stretchy="false">)</mo>
+            </mrow>
+          </math>.
     </p>
     <p>
         Most calculators are also restricted to radians, and while the conversion to another unit
@@ -34,7 +52,12 @@
 
     <math display="block" class="tml-display" style="display:block math;">
         <mrow>
-          <mtext>aTan2(x,y)</mtext>
+          <mtext>aTan2</mtext>
+          <mo form="prefix" stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo separator="true">,</mo>
+          <mi>y</mi>
+          <mo form="postfix" stretchy="false">)</mo>
           <mo>=</mo>
           <mrow>
             <mo fence="true" form="prefix">{</mo>
