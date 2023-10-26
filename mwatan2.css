@@ -1,5 +1,5 @@
 h1 {
-    font-family: sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
@@ -9,6 +9,11 @@ h1 {
     text-indent: 6px;
     background-color: sienna;
     color: azure;
+}
+
+ol {
+    text-indent: 0rem;
+    line-height: 175%;
 }
 
 /* new addition: basic validation */
@@ -28,11 +33,19 @@ body {
 }
 
 p {
-    margin-left: 6px;
+    margin-left: 2rem;
+}
+
+h2, h3 {
+    margin-left: 1.2rem;
 }
 
 .credit {
-    margin-top: 0px;
+    margin-top: 0.4rem;
+}
+
+form {
+    margin-bottom: 4rem;
 }
 
 .form-bckgrd {
