@@ -31,8 +31,7 @@
               <mi>π</mi>
               <mo form="postfix" stretchy="false">]</mo>
             </mrow>
-          </math>, which, in my opinion,
-        is not as useful as returning an angle between 
+          </math>, which, in my opinion, is not as useful as returning an angle between 
         <math display="inline" class="tml-display" style="display:block math;">
             <mrow>
               <mo form="prefix" stretchy="false">[</mo>
@@ -235,6 +234,7 @@
             <!-- new addition: placeholder & regex regex (require numerical text)-->
             <input class="numerical" type="text" id="y" name="y" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
             <label for="unit" class="form-drop">Select unit</label>
+            <!-- add size for responve design -->
             <select name="unit" id="unit" class="form-drop" required>
                 <!-- new addition: default for validation -->
                 <option value="">Select an angle measure</option>
@@ -297,7 +297,7 @@
     </div>
 
     <!-- new addition: focus changes color -->
-    <script>
+    <!-- <script>
         function bckgrd(e) {
             if (e.type == "focus") {
                 e.target.style.backgroundColor = "#FFE393";
@@ -316,7 +316,7 @@
                 f.addEventListener("blur", bckgrd);
             }
         });
-    </script>
+    </script> -->
 
     <div id="results">
 

@@ -17,13 +17,18 @@ ol {
 }
 
 /* new addition: basic validation */
-/* input.numerical:valid {
+input.numerical:valid {
     background-color: #8cdb80;
 }
 
 input.numerical:invalid {
     background-color: #bd5b5b;
-} */
+}
+
+input.numerical:focus {
+    background-color: #FFE393;
+}
+
 
 body {
     font-family: sans-serif;
