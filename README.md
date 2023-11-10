@@ -4,4 +4,3 @@
 <p>Need to add responsive design and other tweaks.</p>
 <p>Perhaps an option for tabulation of all unit options.</p>
 <p>Site is live at:</p>
-https://w3stu.cs.jmu.edu/wolffemf/improved-atan2/
