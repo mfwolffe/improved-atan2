@@ -1,7 +1,5 @@
 // import data from "./valid_units.json" assert { type: "json" };
 // reimpliment the import (although I had it working so I accomplished my goal.)
-// Alternatively just ask Dr. Stewart if there's a way to get LiveServer to allow 
-// imports
 
 const data = [
     {
@@ -225,28 +223,22 @@ document.getElementById("coords").addEventListener("submit", function(e) {
         }
     }
 
-    // old
-    // function generateMessage() {
-    //     return `The standard angle produced with terminal ray passing through the point ` +
-    //            `(${x_coord}, ${y_coord}) is ${result}${(unit == "degrees") ? symbol : " " + symbol}`;
-    // }
-
     function writeOutput() {
 
         let outputTarget = document.getElementById("results");
 
         let paragraph = document.createElement("p");
 
-        let output = document.createTextNode(`The standard angle produced with terminal ray passing through the point ` +
-                                             `(${x_coord}, ${y_coord}) is ${result}${(unit == "degrees") ? symbol : " " + symbol}`);
+        let output = `The standard angle produced with terminal ray passing through the point ` +
+                                             `(${x_coord}, ${y_coord}) is ${result}${(unit == "degrees") ? symbol : " " + symbol}`;
 
 
         if (document.getElementById("retain").checked) {
-        paragraph.appendChild(output);
+        paragraph.innerText = output;
         outputTarget.appendChild(paragraph);
         } else {
             outputTarget.innerHTML = '';
-            paragraph.appendChild(output);
+            paragraph.innerText = output;
             outputTarget.appendChild(paragraph);
         }
     }

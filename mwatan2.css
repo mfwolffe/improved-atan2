@@ -1,14 +1,11 @@
 h1 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+    font-family: Arial;
+    margin: 0 0 0 0;
     height: 60px;
     line-height: 60px;
     text-indent: 6px;
-    background-color: sienna;
-    color: azure;
+    background-color: #AF9B46;
+    color: #ffffff;
 }
 
 ol {
@@ -16,7 +13,6 @@ ol {
     line-height: 175%;
 }
 
-/* new addition: basic validation */
 input.numerical:valid {
     background-color: #8cdb80;
 }
@@ -28,7 +24,6 @@ input.numerical:invalid {
 input.numerical:focus {
     background-color: #FFE393;
 }
-
 
 body {
     font-family: sans-serif;
@@ -61,7 +56,8 @@ form {
     text-align: center;
     width: 20rem;
     height: 13rem;
-    background-color: #7FDBFF;
+    background-color: #AF9B46;
+    color: #ffffff;
 }
 
 fieldset > legend {

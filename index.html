@@ -10,11 +10,6 @@
 </head>
 
 <body>
-    <!-- TODO: 
-                - Add LaTeX (or alternative, but I use LaTeX all the time) to the html to show
-                   a formal piecewise definition of this version of aTan2()
-                - bootstrap for responsive design
-    -->
 
     <h1>A Better ATan2</h1>
     <p class="credit"><small>by Matt Wolffe</small></p>
@@ -181,7 +176,7 @@
                     <mn>0</mn>
                     <mtext> and </mtext>
                     <mi>y</mi>
-                    <mo>&gt;</mo>
+                    <mo>&lt;</mo>
                     <mn>0</mn>
                   </mrow>
                 </mtd>
@@ -226,13 +221,12 @@
             <div class="form-cntnt">
 
             <!-- fieldset & legend?? -->
-
             <label for="x">x-coordinate:</label>
             <!-- new addition: placeholder & regex (require numerical text)-->
-            <input class="numerical" type="text" id="x" name="x" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
+            <input class="numerical"  id="x" name="x" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
             <label for="y">y-coordinate:</label>
-            <!-- new addition: placeholder & regex regex (require numerical text)-->
-            <input class="numerical" type="text" id="y" name="y" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
+            <!-- new addition: placeholder & regex (require numerical text)-->
+            <input class="numerical" id="y" name="y" placeholder="Enter a number" pattern="^-?\d*\.?\d*" required><br>
             <label for="unit" class="form-drop">Select unit</label>
             <!-- add size for responve design -->
             <select name="unit" id="unit" class="form-drop" required>
@@ -289,34 +283,11 @@
 
                 <input type="radio" id="overwrite" name="outputChoice" checked>
                 <label for="overwrite">Overwrite</label>
-
              </fieldset>
 
         </div>
         </form>
     </div>
-
-    <!-- new addition: focus changes color -->
-    <!-- <script>
-        function bckgrd(e) {
-            if (e.type == "focus") {
-                e.target.style.backgroundColor = "#FFE393";
-            }
-            else if (e.type == "blur") {
-                e.target.style.backgroundColor = "#FFFFFF";
-            }
-        }
-
-        window.addEventListener("load", function() {
-            const cssSelector = "input[type=text]";
-            const fields = document.querySelectorAll(cssSelector);
-
-            for (let f of fields) {
-                f.addEventListener("focus", bckgrd);
-                f.addEventListener("blur", bckgrd);
-            }
-        });
-    </script> -->
 
     <div id="results">
 
